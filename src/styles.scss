@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: none;
+    margin: none;
+  }
+}
+.btn{
+  height: 100px;
+  border-radius: 50px;
+}
+.modal-header {
+  background-color: rgb(245, 124, 0) !important;
+  color: white;
+  h1 {
+    font-size: 3rem !important;
+  }
+}
+.btn-primary {
+  background-color: rgb(245, 124, 0);
+  border-color: rgb(245, 124, 0);
+}
+.btn-primary:hover {
+  background-color: rgb(172, 86, 0);
+  border-color: rgb(172, 86, 0);
+}
