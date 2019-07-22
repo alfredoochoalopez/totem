@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,8 +12,6 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { ScanComponent } from './scan/scan.component';
 import { SurveyComponent } from './survey/survey.component';
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +26,8 @@ import { SurveyComponent } from './survey/survey.component';
     BrowserModule,
     BrowserAnimationsModule,
     ButtonsModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    HttpClientModule
   ],
   providers: [
     AppService

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 export enum STATUS {
   EMPTY = "empty",
@@ -14,8 +15,8 @@ export interface Case {
 export class AppService {
 
   private statusCases: Case[] = [{ number: 1, status: STATUS.EMPTY }, { number: 2, status: STATUS.EMPTY }, { number: 3, status: STATUS.EMPTY }, { number: 4, status: STATUS.EMPTY }, { number: 5, status: STATUS.EMPTY }, { number: 6, status: STATUS.EMPTY }]
-  constructor() { }
-  get cases(){
+  constructor(private http: HttpClient) { }
+  get cases() {
     return this.statusCases;
   }
   private find(n: number) {
@@ -29,12 +30,14 @@ export class AppService {
     const c = this.find(n);
     c.member = member;
     c.status = STATUS.BUSY
+    this.http.get(`cgi-bin/case${n}.py`).subscribe(_=>{},error=>{})
   }
   unlock(member: string) {
     const c = this.get(member);
     if (c) {
       c.member = null;
       c.status = STATUS.EMPTY
+      this.http.get(`cgi-bin/case${c.number}.py`).subscribe(_=>{},error=>{})
       return true;
     }
     return false;

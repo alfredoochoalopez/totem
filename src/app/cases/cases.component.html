@@ -1,9 +1,9 @@
 <div class="modal-header">
-    <h1 class="modal-title pull-left">Selecciona un cajon</h1>
+    <h1 class="modal-title pull-left">Selecciona un cajón</h1>
 </div>
 <div class="modal-body text-center">
     <button *ngFor="let case of cases" [disabled]="case.status == 'busy'" class="btn btn-secondary col-10" (click)="open(case.number)">
-        <h1>Cajon {{case.number}}</h1>
+        <h1>Cajón {{case.number}}</h1>
     </button>
     <hr>
     <button class="btn btn-secondary col-10" (click)="bsModalRef.hide()">

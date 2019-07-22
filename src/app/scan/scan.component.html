@@ -1,15 +1,15 @@
 <div class="modal-header">
-    <h1 class="modal-title pull-left">Escanea tu membresia</h1>
+    <h1 class="modal-title pull-left">Monedero Chedraui</h1>
 </div>
 <div class="modal-body text-center">
     <div *ngIf="case">
-        <h1 class="display-2">Cajon {{case}}</h1>
+        <h1 class="display-2">Cajón {{case}}</h1>
         <hr>
     </div>
     <img src="assets/scan.gif" alt="">
     <div *ngIf="error">
         <hr>
-        <h1 class="display-2">No registrado</h1>
+        <h1 class="display-1">No registrado</h1>
     </div>
     <hr>
     <button class="btn btn-secondary col-10" (click)="bsModalRef.hide()">
