@@ -1,12 +1,14 @@
-<div class="modal-header">
-    <h1 class="modal-title pull-left">Selecciona un cajón</h1>
-</div>
-<div class="modal-body text-center">
-    <button *ngFor="let case of cases" [disabled]="case.status == 'busy'" class="btn btn-secondary col-10" (click)="open(case.number)">
-        <h1>Cajón {{case.number}}</h1>
-    </button>
-    <hr>
-    <button class="btn btn-secondary col-10" (click)="bsModalRef.hide()">
-        <h1>Cancelar</h1>
-    </button>
+<div class="rotate">
+    <div class="modal-header">
+        <h1 class="modal-title pull-left">Selecciona un cajón</h1>
+    </div>
+    <div class="modal-body text-center">
+        <button *ngFor="let case of cases" [disabled]="case.status == 'busy'" class="btn btn-secondary col-10" (click)="open(case.number)">
+            <h1>Cajón {{case.number}}</h1>
+        </button>
+        <hr>
+        <button class="btn btn-secondary col-10" (click)="bsModalRef.hide()">
+            <h1>Cancelar</h1>
+        </button>
+    </div>
 </div>

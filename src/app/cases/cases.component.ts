@@ -17,6 +17,6 @@ export class CasesComponent implements OnInit {
 
   open(number: number) {
     this.bsModalRef.hide();
-    this.modalService.show(ScanComponent, { initialState: { case: number, pickup: false }, class: 'modal-dialog-centered' });
+    this.modalService.show(ScanComponent, { initialState: { case: number, pickup: false } });
   }
 }

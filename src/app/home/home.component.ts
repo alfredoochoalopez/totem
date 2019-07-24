@@ -15,10 +15,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
   openCases() {
-    this.modalService.show(CasesComponent, { class: 'modal-dialog-centered' });
+    this.modalService.show(CasesComponent);
   }
   pickUp() {
-    this.modalService.show(ScanComponent, { initialState: { pickup: true }, class: 'modal-dialog-centered' })
+    this.modalService.show(ScanComponent, { initialState: { pickup: true } })
   }
 
 }
