@@ -4,6 +4,7 @@ body {
   width: 100%;
   margin: 0;
   overflow: hidden;
+  cursor: none;
 }
 .rotate {
   transform: rotate(90deg);
@@ -14,6 +15,11 @@ body {
   height: 100vw;
   width: 100vh;
   overflow: hidden;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .modal-dialog {
   margin: 0px !important;
@@ -33,6 +39,10 @@ body {
 .btn {
   height: 80px;
   border-radius: 40px;
+  cursor: none;
+}
+.btn:hover {
+  cursor: none;
 }
 .modal-header {
   background-color: rgb(245, 124, 0) !important;
@@ -45,7 +55,8 @@ body {
   background-color: rgb(245, 124, 0);
   border-color: rgb(245, 124, 0);
 }
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus {
   background-color: rgb(172, 86, 0);
   border-color: rgb(172, 86, 0);
 }
